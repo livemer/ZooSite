@@ -1,0 +1,27 @@
+.animals{
+  background-color: rgb(246, 246, 247);
+  padding: 24px 0;
+}
+.animals__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.animals__item{
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  display: flex;
+  flex-basis: 214px;
+  box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.1),0px 0px 2px 0px rgba(0, 0, 0, 0.06);
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  img{
+    border-radius: 5px;
+    height: 73px;
+  }
+}

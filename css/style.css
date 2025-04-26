@@ -1,0 +1,116 @@
+.header__top {
+  background-color: rgb(246, 246, 247);
+  padding: 12px 0;
+}
+
+.header-top__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-top__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.header__bottom {
+  background-color: rgb(0, 160, 172);
+  padding: 12px 0;
+}
+
+.header-bottom_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-bottom__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  white-space: nowrap;
+}
+
+.cart__button {
+  background-color: rgb(246, 246, 247);
+  padding: 5px;
+  border: 2px solid;
+  border-color: rgb(187, 191, 195);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.search {
+  border: 2px solid;
+  border-color: rgb(187, 191, 195);
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.search input {
+  width: 448px;
+}
+
+.animals {
+  background-color: rgb(246, 246, 247);
+  padding: 24px 0;
+}
+
+.animals__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.animals__item {
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  display: flex;
+  flex-basis: 214px;
+  box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.1), 0px 0px 2px 0px rgba(0, 0, 0, 0.06);
+}
+.animals__item div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.animals__item img {
+  border-radius: 5px;
+  height: 73px;
+}
+
+@font-face {
+  font-family: SF;
+  src: url("../fonts/SFProText-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: SF;
+  src: url("../fonts/SFProText-Semibold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+.wrapper {
+  background: rgb(224, 224, 224);
+  font-family: SF;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}/*# sourceMappingURL=style.css.map */

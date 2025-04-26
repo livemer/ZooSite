@@ -1,0 +1,27 @@
+@use './header/header';
+@use './main/animals';
+
+@font-face {
+  font-family: SF;
+  src: url('../fonts/SFProText-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: SF;
+  src: url('../fonts/SFProText-Semibold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.wrapper{
+  background: rgb(224, 224, 224);
+  font-family: SF;
+  font-size: 14px;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
