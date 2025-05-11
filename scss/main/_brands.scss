@@ -1,0 +1,26 @@
+.brands{
+  background-color: rgb(246, 246, 247);
+  padding: 56px 0;
+}
+.brands__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.brands__grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(174px, 1fr));
+  gap:25px;
+}
+.brands-grid__item{
+  padding: 14px 20px 14px 20px;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brands-grid__item img{
+  width: 134px;
+  height: 87px;
+}

@@ -28,6 +28,9 @@
   gap:32px;
   white-space: nowrap;
 }
+.header-bottom__item p:hover{
+  text-decoration-line: underline;
+}
 .cart__button{
   background-color: rgb(246, 246, 247);
   padding: 5px;

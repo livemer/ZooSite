@@ -1,0 +1,97 @@
+[
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "TelegramClient",
+        "importPath": "telethon",
+        "description": "telethon",
+        "isExtraImport": true,
+        "detail": "telethon",
+        "documentation": {}
+    },
+    {
+        "label": "events",
+        "importPath": "telethon",
+        "description": "telethon",
+        "isExtraImport": true,
+        "detail": "telethon",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateProfileRequest",
+        "importPath": "telethon.tl.functions.account",
+        "description": "telethon.tl.functions.account",
+        "isExtraImport": true,
+        "detail": "telethon.tl.functions.account",
+        "documentation": {}
+    },
+    {
+        "label": "hours_until_summer",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def hours_until_summer():\n    now = datetime.now()\n    # Дата начала лета (1 июня текущего года)\n    summer_start = datetime(now.year, 6, 1)\n    # Если лето уже наступило, берём следующий год\n    if now > summer_start:\n        summer_start = datetime(now.year + 1, 6, 1)\n    time_left = summer_start - now\n    total_hours = time_left.days * 24 + time_left.seconds // 3600\n    return f\"{total_hours} часов\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "api_id",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "api_id = 27598389  # Получить на my.telegram.org\napi_hash = 'e59a6ae0c6a7f0f182298d704d023a0f'  # Получить на my.telegram.org\nphone_number = '+447795498652'  # В формате '+79991234567'\nbio = \"тгк: @gamedev808 // \"\ndef hours_until_summer():\n    now = datetime.now()\n    # Дата начала лета (1 июня текущего года)\n    summer_start = datetime(now.year, 6, 1)\n    # Если лето уже наступило, берём следующий год\n    if now > summer_start:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "api_hash",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "api_hash = 'e59a6ae0c6a7f0f182298d704d023a0f'  # Получить на my.telegram.org\nphone_number = '+447795498652'  # В формате '+79991234567'\nbio = \"тгк: @gamedev808 // \"\ndef hours_until_summer():\n    now = datetime.now()\n    # Дата начала лета (1 июня текущего года)\n    summer_start = datetime(now.year, 6, 1)\n    # Если лето уже наступило, берём следующий год\n    if now > summer_start:\n        summer_start = datetime(now.year + 1, 6, 1)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "phone_number",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "phone_number = '+447795498652'  # В формате '+79991234567'\nbio = \"тгк: @gamedev808 // \"\ndef hours_until_summer():\n    now = datetime.now()\n    # Дата начала лета (1 июня текущего года)\n    summer_start = datetime(now.year, 6, 1)\n    # Если лето уже наступило, берём следующий год\n    if now > summer_start:\n        summer_start = datetime(now.year + 1, 6, 1)\n    time_left = summer_start - now",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "bio",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "bio = \"тгк: @gamedev808 // \"\ndef hours_until_summer():\n    now = datetime.now()\n    # Дата начала лета (1 июня текущего года)\n    summer_start = datetime(now.year, 6, 1)\n    # Если лето уже наступило, берём следующий год\n    if now > summer_start:\n        summer_start = datetime(now.year + 1, 6, 1)\n    time_left = summer_start - now\n    total_hours = time_left.days * 24 + time_left.seconds // 3600",
+        "detail": "main",
+        "documentation": {}
+    }
+]
