@@ -49,8 +49,8 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
     let elem = document.createElement("div");
     elem.className = "item"
     elem.innerHTML = `<div class="item__header">
-            <img src="${res[i]['image_prev']}" alt="" >
-            ${res[i]['title']}
+            <img src="${res[i]['image_prev']}" alt="">
+            <p class="text">${res[i]['title']}</p>
           </div>
           <div class="item_main">
             <div class="count">
@@ -59,13 +59,13 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
           </div>
           <div class="item__footer">
             <div>
-              <p>${res[i]['price']} BYN</p>
-              <button class="cart__button">
-                <p>+</p>
+              <p class="text">${res[i]['price']} BYN</p>
+              <button class="cart__button" style="background:none;">
+                <p class="text">+</p>
                 <img src="./img/Primary fill(2).svg" alt="">
               </button>
             </div>
-            <button class="big__btn">Купить в 1 клик</button>
+            <button class="big__btn"><p class="btn__text">Купить в 1 клик</p></button>
           </div>`
     res[i]['countitemproduct_set'].forEach(element => {
       elem.children[1].children[0].innerHTML = `${elem.children[1].children[0].innerHTML}<div class="cnt">${element.value} ${element.unit}</div>`

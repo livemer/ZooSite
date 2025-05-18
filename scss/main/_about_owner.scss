@@ -1,0 +1,15 @@
+.about__owner{
+  background-color: white;
+}
+.about-owner__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-owner__box{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  flex-grow: 1;
+  padding-right: 110px;
+}

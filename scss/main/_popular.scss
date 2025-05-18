@@ -15,9 +15,6 @@
   gap: 32px;
 }
 .sale{
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 130%;
   border-radius: 5px;
   display: flex;
   button{
@@ -35,13 +32,13 @@
 .sale__left{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap:16px;
   padding: 24px 0 24px 24px;
 }
 .sale__right{
-  padding: 0 23px;
   img{
     height: 100%;
+    margin-right: 5px;
   }
 }
 
@@ -113,9 +110,15 @@
   background-color: #449DA7;
   color: white;
   text-align: center;
-  padding: 5px;
+  padding: 2px 8px;
   border-radius: 2px;
   white-space: nowrap;
+  font-family: SF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 .cnt{
   background-color: #E4E5E7;
@@ -136,6 +139,9 @@
 }
 
 .big__btn{
+  p{
+    font-weight: 500;
+  }
   border: 1px solid rgb(0, 160, 172);
   border-radius: 4px;
   width: 100%;

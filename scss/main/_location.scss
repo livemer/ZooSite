@@ -1,0 +1,13 @@
+.location{
+  padding: 56px 0;
+  background-color: rgb(246, 246, 247);
+}
+.location__wrapper{
+  display: flex;
+  gap: 86px;
+  ul{
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+  }
+}

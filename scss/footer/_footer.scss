@@ -1,0 +1,13 @@
+.footer{
+  background-color: white;
+  padding: 16px 0;
+}
+.footer__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap:16px;
+}
+.footer__item{
+  display: flex;
+  justify-content: space-between;
+}

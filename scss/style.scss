@@ -1,9 +1,14 @@
+@use './texts';
 @use './header/header';
 @use './main/animals';
 @use './main/about';
 @use './main/popular';
 @use './main/new';
 @use './main/brands';
+@use './main/articles';
+@use './main/about_owner';
+@use './main/location';
+@use './footer/footer';
 
 @font-face {
   font-family: SF;
@@ -24,24 +29,16 @@
   font-style: normal;
 }
 
-h2{
-  font-size: 42px;
-  font-weight: 700;
-}
-
-h4{
-  font-size: 28px;
-  font-weight: 500;
-}
-
 .wrapper{
   background: rgb(224, 224, 224);
-  font-family: SF;
-  font-size: 14px;
 }
 
 .container{
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+input{
+  font-family: SF;
 }
