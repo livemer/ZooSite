@@ -47,16 +47,20 @@ header{
   align-items: center;
   gap:32px;
   white-space: nowrap;
+  p{
+    cursor: pointer;
+  }
 }
 .header-bottom__item p:hover{
   text-decoration-line: underline;
 }
 .cart__button{
-  background-color: rgb(246, 246, 247);
-  padding: 5px;
-  border: 2px solid;
-  border-color: rgb(187, 191, 195);
-  border-radius: 6px;
+  border: 3px solid rgb(187, 187, 187);
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  background: rgb(246, 246, 247);
+  padding: 8px 14px 8px 12px;
   display: flex;
   justify-content: center;
   align-items: center;

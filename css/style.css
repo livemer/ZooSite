@@ -7,7 +7,7 @@
   text-align: left;
 }
 
-.section__title {
+.section__title, .articles__title {
   font-family: SF;
   font-size: 28px;
   font-weight: 600;
@@ -131,17 +131,21 @@ header {
   gap: 32px;
   white-space: nowrap;
 }
+.header-bottom__item p {
+  cursor: pointer;
+}
 
 .header-bottom__item p:hover {
   text-decoration-line: underline;
 }
 
 .cart__button {
-  background-color: rgb(246, 246, 247);
-  padding: 5px;
-  border: 2px solid;
-  border-color: rgb(187, 191, 195);
-  border-radius: 6px;
+  border: 3px solid rgb(187, 187, 187);
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  background: rgb(246, 246, 247);
+  padding: 8px 14px 8px 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,6 +185,7 @@ header {
   background-color: white;
   display: flex;
   flex-basis: 214px;
+  cursor: pointer;
 }
 .animals__item div {
   display: flex;
@@ -299,12 +304,12 @@ header {
 
 .sale__right img {
   height: 100%;
-  margin-right: 5px;
+  margin-right: 28px;
 }
 
 .box {
   overflow: hidden;
-  padding: 24px 0;
+  padding: 56px 0;
 }
 
 .box__header {
@@ -335,7 +340,7 @@ header {
   width: 20px;
 }
 
-.box__main {
+.box__main, .box__main__new {
   display: flex;
   gap: 30px;
   transition: all ease 0.2s;
@@ -363,6 +368,7 @@ header {
   -o-object-fit: contain;
      object-fit: contain;
   height: 130px;
+  margin-bottom: 16px;
 }
 
 .count {
@@ -390,6 +396,12 @@ header {
 .cnt {
   background-color: #E4E5E7;
   color: black;
+  transition: all ease 0.3s;
+}
+
+.cnt:hover {
+  background: rgb(68, 157, 167);
+  color: white;
 }
 
 .item__footer p {
@@ -571,6 +583,10 @@ header {
   border-radius: 5px;
   box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.1), 0px 0px 2px 0px rgba(0, 0, 0, 0.06);
   background: rgb(255, 255, 255);
+}
+
+.articles__title {
+  margin: 0;
 }
 
 .about__owner {

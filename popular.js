@@ -1,6 +1,7 @@
 let arrows = document.querySelectorAll(".arrows button")
 let mainDiv = document.querySelector(".box__main")
 
+
 function main(){
   let item = document.querySelector(".item")
   let itemNum = document.querySelectorAll(".item").length;
@@ -9,7 +10,7 @@ function main(){
   let step = item.clientWidth+30;
   
   let minCount = 0;
-  let maxCount = -itemNum*step+step+step;
+  let maxCount = -itemNum/2*step+step+step;
   
   arrows.forEach(element => {
     element.addEventListener("click", function(e){
@@ -37,7 +38,6 @@ function main(){
   }
 }
 
-
 fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
 .then((response) => {
   return response.json();
@@ -45,7 +45,6 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
 .then((data) => {
   let res = data['results']
   for(let i = 0; i < res.length; i++) {
-    console.log(res[i]);
     let elem = document.createElement("div");
     elem.className = "item"
     elem.innerHTML = `<div class="item__header">
@@ -70,7 +69,18 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
     res[i]['countitemproduct_set'].forEach(element => {
       elem.children[1].children[0].innerHTML = `${elem.children[1].children[0].innerHTML}<div class="cnt">${element.value} ${element.unit}</div>`
     });
-    
+    for (let i = 0; i < elem.children[1].children[0].childElementCount; i++) {
+      child = elem.children[1].children[0].children[i]
+      console.log(child);
+      
+
+      child.addEventListener("click", function(e){
+        for (let j = 0; j < elem.children[1].children[0].childElementCount; j++) {
+          elem.children[1].children[0].children[j].className = "cnt"
+        }
+        elem.children[1].children[0].children[i].className = "selected__cnt"
+      })
+    }
     mainDiv.append(elem)
   }
   main()

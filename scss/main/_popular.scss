@@ -38,13 +38,13 @@
 .sale__right{
   img{
     height: 100%;
-    margin-right: 5px;
+    margin-right: 28px;
   }
 }
 
 .box{
   overflow: hidden;
-  padding: 24px 0;
+  padding: 56px 0;
 }
 
 .box__header{
@@ -74,7 +74,7 @@
   width: 20px;
   
 }
-.box__main{
+.box__main, .box__main__new{
   display: flex; 
   gap: 30px;
   transition: all ease 0.2s;
@@ -99,6 +99,7 @@
   width: 254px;
   object-fit: contain;
   height: 130px;
+  margin-bottom: 16px;
 }
 .count{
   display: flex;
@@ -123,6 +124,11 @@
 .cnt{
   background-color: #E4E5E7;
   color: black;
+  transition: all ease 0.3s;
+}
+.cnt:hover{
+  background: rgb(68, 157, 167);
+  color: white;
 }
 .item__footer{
   p{

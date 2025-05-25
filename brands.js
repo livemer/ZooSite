@@ -14,5 +14,4 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_brands_list/')
     
     grid.append(elem)
   }
-  main()
 });

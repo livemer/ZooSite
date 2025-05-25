@@ -1,7 +1,7 @@
 let newArrows = document.querySelectorAll(".newArrows button")
-let newDiv = document.querySelectorAll(".box__main")[1]
+let newDiv = document.querySelector(".box__main__new")
 
-function main(){
+function mainNew(){
   let item = document.querySelector(".item")
   let itemNum = document.querySelectorAll(".item").length;
 
@@ -9,7 +9,7 @@ function main(){
   let step = item.clientWidth+30;
   
   let minCount = 0;
-  let maxCount = -itemNum*step+step+step;
+  let maxCount = -itemNum/2*step+step+step;
   
   newArrows.forEach(element => {
     element.addEventListener("click", function(e){
@@ -33,7 +33,7 @@ function main(){
   });
   
   function SetPos(num){
-    mainDiv.style.transform = "translateX("+num+"px)"
+    newDiv.style.transform = "translateX("+num+"px)"
   }
 }
 
@@ -45,7 +45,6 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
 .then((data) => {
   let res = data['results']
   for(let i = 0; i < res.length; i++) {
-    console.log(res[i]);
     let elem = document.createElement("div");
     elem.className = "item"
     elem.style.backgroundColor = "rgb(250, 251, 251)"
@@ -72,8 +71,20 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
       elem.children[1].children[0].innerHTML = `${elem.children[1].children[0].innerHTML}<div class="cnt">${element.value} ${element.unit}</div>`
       
     });
+    for (let i = 0; i < elem.children[1].children[0].childElementCount; i++) {
+      child = elem.children[1].children[0].children[i]
+      console.log(child);
+      
+
+      child.addEventListener("click", function(e){
+        for (let j = 0; j < elem.children[1].children[0].childElementCount; j++) {
+          elem.children[1].children[0].children[j].className = "cnt"
+        }
+        elem.children[1].children[0].children[i].className = "selected__cnt"
+      })
+    }
     
     newDiv.append(elem)
   }
-  main()
+  mainNew()
 });
