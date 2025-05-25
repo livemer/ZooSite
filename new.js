@@ -45,12 +45,12 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
 .then((data) => {
   let res = data['results']
   for(let i = 0; i < res.length; i++) {
-    let elem = document.createElement("div");
+    let elem = document.createElement("article");
     elem.className = "item"
     elem.style.backgroundColor = "rgb(250, 251, 251)"
     elem.innerHTML = `<div class="item__header">
             <img src="${res[i]['image_prev']}" alt="">
-            <p class="text">${res[i]['title']}</p>
+            <h3 class="article__header">${res[i]['title']}</h3>
           </div>
           <div class="item_main">
             <div class="count">
@@ -60,7 +60,7 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
           <div class="item__footer">
             <div>
               <p class="text">${res[i]['price']} BYN</p>
-              <button class="cart__button" style="background:none;">
+              <button class="cart" style="background:none;">
                 <p class="text">+</p>
                 <img src="./img/Primary fill(2).svg" alt="">
               </button>

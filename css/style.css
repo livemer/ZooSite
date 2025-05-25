@@ -38,7 +38,7 @@
 
 .text {
   font-family: SF;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0px;
@@ -79,6 +79,26 @@
   font-family: SF;
   font-size: 16px;
   font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.article__header {
+  color: rgb(0, 0, 0);
+  font-family: SF;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0rem;
+  text-align: left;
+}
+
+.article__name {
+  color: rgb(32, 34, 35);
+  font-family: SF;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 24px;
   letter-spacing: 0px;
   text-align: left;
@@ -347,14 +367,13 @@ header {
   border-radius: 50%;
   height: 40px;
   width: 40px;
-  transition: all ease 0.3s;
+  transition: all ease 0.6s;
 }
 .arrows button:hover, .newArrows button:hover {
   background: rgb(0, 160, 172);
 }
-
-.arrows button:hover {
-  background: rgb(0, 160, 172);
+.arrows button:hover svg path, .newArrows button:hover svg path {
+  fill: white;
 }
 
 .box__main, .box__main__new {
@@ -450,6 +469,19 @@ header {
 .big__btn:hover {
   background-color: rgb(0, 160, 172);
   color: white;
+}
+
+.cart {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  background: rgb(255, 255, 255);
+  padding: 5px 8px 5px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid rgb(186, 191, 195);
 }
 
 .new {
@@ -573,17 +605,18 @@ header {
   border-radius: 5px;
   background: rgb(255, 255, 255);
   padding: 16px;
-  gap: 16px;
   transition: ease all 0.3s;
+  gap: 16px;
 }
-.article div {
+
+.article__bottom {
   display: flex;
   align-items: center;
   gap: 5px;
   justify-content: space-between;
   text-wrap-mode: nowrap;
 }
-.article div p {
+.article__bottom p {
   color: rgb(140, 145, 150);
   font-family: SF;
   font-size: 14px;
@@ -592,7 +625,27 @@ header {
   letter-spacing: 0px;
   text-align: left;
 }
-.article div img {
+.article__bottom img {
+  width: 12.8px;
+  height: 12.8px;
+}
+.article__bottom div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+  text-wrap-mode: nowrap;
+}
+.article__bottom div p {
+  color: rgb(140, 145, 150);
+  font-family: SF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.article__bottom div img {
   width: 12.8px;
   height: 12.8px;
 }

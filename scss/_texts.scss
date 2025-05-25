@@ -40,7 +40,7 @@
 
 .text{
   font-family: SF;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0px;
@@ -84,4 +84,24 @@
   line-height: 24px;
   letter-spacing: 0px;
   text-align: left;
+}
+
+.article__header{
+  color: rgb(0, 0, 0);
+  font-family: SF;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0rem;
+  text-align: left;
+}
+
+.article__name{
+  color: rgb(32, 34, 35);
+font-family: SF;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0px;
+text-align: left;
 }
