@@ -77,10 +77,16 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
       
 
       child.addEventListener("click", function(e){
+        cn = elem.children[1].children[0].children[i].className
         for (let j = 0; j < elem.children[1].children[0].childElementCount; j++) {
           elem.children[1].children[0].children[j].className = "cnt"
         }
-        elem.children[1].children[0].children[i].className = "selected__cnt"
+        if(cn == "selected__cnt"){
+          elem.children[1].children[0].children[i].className = "cnt"
+        }
+        else{
+          elem.children[1].children[0].children[i].className = "selected__cnt"
+        }
       })
     }
     
