@@ -405,4 +405,13 @@ header{
 .popular{
     padding-bottom: 0 !important;
 }
+    .modal {
+        padding: 24px 16px !important;
+    }
+    .buy__list{
+      display: block;
+    }
+    .price{
+      flex-direction: row !important;
+    }
 }

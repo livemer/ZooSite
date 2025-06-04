@@ -1,0 +1,72 @@
+.modal__wrapper{
+  background: rgba(0, 0, 0, 0.5);
+  height: 100dvh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  padding: 0 10px;
+}
+.modal{
+  max-width: 512px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 56px;
+  border-radius: 8px;
+  background: rgb(255, 255, 255);
+  position: relative;
+  input{
+    box-sizing: border-box;
+    /* Text input border */
+    border-radius: 4px;
+
+    /* Surface/Default */
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(167, 172, 177);
+    padding: 8px 12px 8px 12px;
+    color: black;
+    width: 100%;
+    font-family: 400 !important;
+  }
+  input::placeholder{
+    color: black;
+    font-family: 400 !important;
+  }
+}
+.cross{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.modal__img{
+  width: 40px;
+  height: 40px;
+  align-self: center;
+}
+.buy__list{
+  display: flex;
+  gap:16px;
+  p{
+    line-height: 130%;
+  }
+}
+.small__btn{
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  background: rgb(255, 255, 255);
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgb(186, 191, 195);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
