@@ -114,6 +114,16 @@
   text-align: left;
 }
 
+.text__active {
+  color: rgb(128, 207, 213);
+  font-family: SF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
 header {
   position: fixed;
   top: 0px;
@@ -156,7 +166,7 @@ header {
 
 .header__bottom {
   background-color: rgb(0, 160, 172);
-  padding: 12px 0;
+  padding: 6px 0;
 }
 
 .header-bottom_wrapper {
@@ -174,8 +184,8 @@ header {
   cursor: pointer;
 }
 
-.header-bottom__item p:hover {
-  text-decoration-line: underline;
+.header-bottom__nav p:hover {
+  text-decoration: underline;
 }
 
 .cart__button {
@@ -484,7 +494,7 @@ header {
   }
   .box {
     padding: 0 !important;
-    padding-top: 0 !important;
+    padding-top: 32px !important;
     padding-bottom: 10px !important;
   }
   .brands {
@@ -530,6 +540,12 @@ header {
   }
   main {
     padding-top: 44px !important;
+  }
+  .box__main, .box__main__new {
+    gap: 18px !important;
+  }
+  .popular {
+    padding-bottom: 0 !important;
   }
 }
 .animals {
@@ -641,7 +657,6 @@ main {
 
 .popular {
   background-color: rgb(246, 246, 247);
-  padding: 57px 0;
   padding-top: 56px;
   padding-bottom: 57px;
 }
@@ -943,7 +958,6 @@ main {
 
 .articles__box {
   display: flex;
-  justify-content: center;
   gap: 30px;
   margin-bottom: 25px;
 }
@@ -1073,6 +1087,12 @@ main {
   font-family: SF;
   src: url("../fonts/SFProText-Regular.ttf");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: SF;
+  src: url("../fonts/SFProText-Medium.ttf");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
