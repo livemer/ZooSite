@@ -8,7 +8,7 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper" style="overflow: hidden;">
     <header>
       <div class="header__top">
         <div class="container">
@@ -43,26 +43,65 @@
       <div class="header__bottom">
         <div class="container">
           <ul class="header-bottom_wrapper">
-            <li class="header-bottom__item">
-              <img src="./img/Frame 232.svg" alt="">
+            <li class="header-bottom__logo">
+              <img class="w_logo" src="./img/Frame 232.svg" alt="">
+              <img class="b_logo" src="./img/Frame 233.svg" alt="">
             </li>
-            <li class="header-bottom__item">
-              <div class="search">
-                <img src="./img/Search.svg" alt="">
-                <input type="text" placeholder="Поиск">
+            <nav class="header__nav">
+              <search class="header-bottom__search">
+                <div class="search">
+                  <img src="./img/Search.svg" alt="">
+                  <input type="text" placeholder="Поиск">
+                </div>
+              </search>
+              <div class="header-bottom__nav">
+                <p class="text">Главная</p>
+                <p class="text">Каталог</p>
+                <p class="text">Акции</p>
+                <p class="text">Статьи</p>
               </div>
-            </li>
-            <li class="header-bottom__item" style="color:white">
-              <p class="text">Главная</p>
-              <p class="text">Каталог</p>
-              <p class="text">Акции</p>
-              <p class="text">Статьи</p>
-            </li>
-            <li class="header-bottom__item" style="color:white">
+            <li class="header-bottom__item" style="color:white;">
               <button class="cart__button">
                 <img src="./img/Primary fill(2).svg" alt="">
-                <p class="text">0</p>
+                <p class="text cart__text">0</p>
+                <p class="text cart__text-active">Корзина</p>
               </button>
+            </li>
+              <div class="header__mobile">
+                <ul class="header-top__wrapper">
+                  <li class="header-top__item">
+                    <div>
+                      <img src="./img/location_major.svg" alt="">
+                      <p class="text">Минск, ул. Чюрлёниса, 6.</p>
+                    </div>-
+                    <div>
+                      <img src="./img/Vector.svg" alt="">
+                      <p class="text">Малиновка</p>
+                    </div>
+                  </li>
+                  <li class="header-top__item">
+                    <img src="./img/Primary fill.svg" alt="">
+                    <p class="text">Пон.-Пят. 10:00-21:00</p>
+                    <img src="./img/palochka.svg" alt="" style="height: 20px;">
+                    <p class="text">Суб.-Вос. 10:00-20:00</p>
+                  </li>
+                  <li class="header-top__item">
+                    <img src="./img/Primary fill(1).svg" alt="">
+                    <a href="tel:+375445010355" class="text" style="color: black;">+ 375 (44) 501 03 55 </a>
+                    <a href="https://instagram.com"><img src="./img/instagram-2-1 1.svg" alt=""></a>
+                  </li>
+                  <li class="header-top__item">
+                    <a href="#" class="link">Обратный звонок</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <li class="header-bottom__palochki" style="color:white">
+              <img src="./img/Search.svg" alt="">
+              <img src="./img/Primary fill(2).svg" alt="">
+              <div class="header-bottom__burger">
+                <span></span>
+              </div>
             </li>
           </ul>
         </div>
@@ -112,10 +151,10 @@
               <h1 class="main__title">Всё, что нужно вашему питомцу в 9 мин от метро Малиновка</h1>
               <ul class="about__box">
                 <div class="about__item">
-                  <p class="text"><strong>Более 5000 товаров</strong> для животных в наличии</p>
+                  <p class="about__text"><strong>Более 5000 товаров</strong> для животных в наличии</p>
                 </div>
                 <div class="about__item">
-                  <p class="text"><strong>Вкусные сюрпризы</strong> для ваших питомцев в магазине</p>  
+                  <p class="about__text"><strong>Вкусные сюрпризы</strong> для ваших питомцев в магазине</p>  
                 </div>
               </ul>
               <button class="about__btn"><p class="text">Выбрать товар</p></button>
@@ -344,7 +383,7 @@
                 <p class="text"><strong>Поставим товар на заказ!</strong><br>Мы работаем с лучшими поставщиками сертифитированного товара для животных. Если нужного Вам товара не будет в наличии мы в кратчайшие сроки договоримся о его поставке и сообщим Вам.</p>
               </div>
             </div>
-            <div>
+            <div class="about-owner__img">
               <img src="img/image 33.png" alt="" style="width:462.75px;">
             </div>
           </div>
@@ -407,18 +446,18 @@
       <div class="footer">
         <div class="container">
           <div class="footer__wrapper">
-            <div class="footer__item">
-              <img src="./img/Frame 233.png" alt="">
-              <li class="header-bottom__item">
+            <div class="footer__item" style="gap:16px;">
+              <img class="footer__logo" src="./img/Frame 233.png" alt="">
+              <div class="footer__nav">
                 <p class="text">Главная</p>
                 <p class="text">Каталог</p>
                 <p class="text">Акции</p>
                 <p class="text">Статьи</p>
-              </li>
+              </div>
             </div>
             <img src="./img/Line 5.png" alt="">
-            <div class="footer__item">
-              <li class="header-top__item">
+            <div class="footer__item" style="align-items: start; gap: 16px;">
+              <div class="header-top__item">
                 <div>
                   <img src="./img/location_major.svg" alt="">
                   <p class="text">Минск, ул. Чюрлёниса, 6.</p>
@@ -427,13 +466,13 @@
                   <img src="./img/Vector.svg" alt="">
                   <p class="text">Малиновка</p>
                 </div>
-              </li>
-              <li class="header-top__item">
+              </div>
+              <div class="header-top__item">
                 <img src="./img/Primary fill.svg" alt="">
                 <p class="text">Пон.-Пят. 10:00-21:00</p>
-                <img src="./img/_.svg" alt="" style="height: 20px;">
+                <img src="./img/palochka.svg" alt="" style="height: 20px;">
                 <p class="text">Суб.-Вос. 10:00-20:00</p>
-              </li>
+              </div>
               <li class="header-top__item">
                 <img src="./img/Primary fill(1).svg" alt="">
                 <a href="tel:+375445010355" class="text" style="color: black;">+ 375 (44) 501 03 55 </a>
@@ -443,6 +482,7 @@
                 <a href="#" class="link">Обратный звонок</a>
               </li>
             </div>
+            <img src="./img/Line 5.png" alt="">
             <div class="footer__item">
               <p class="small__text">Дизайн сайта: <a href="https://shkuratovdesigner.com">shkuratovdesigner.com</a></p>
               <p class="small__text">© Все права защищены 2022</p>
@@ -455,5 +495,6 @@
   <script src="popular.js"></script>
   <script src="new.js"></script>
   <script src="brands.js"></script>
+  <script src="header.js"></script>
 </body>
 </html>

@@ -1,12 +1,17 @@
 .animals{
   background-color: rgb(246, 246, 247);
   padding: 24px 0;
+  overflow: hidden;
 }
 .animals__wrapper{
+  overflow-x: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap:15px
+}
+.animals__wrapper::-webkit-scrollbar {
+  display: none;
 }
 .animals__item{
   border-radius: 5px;
@@ -25,6 +30,10 @@
     height: 73px;
   }
   cursor: pointer;
+  p{
+    margin-left: 8px;
+    margin-right: 16px;
+  }
 }
 .animals__item:hover div p{
   color: rgb(0, 160, 172);
