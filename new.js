@@ -1,3 +1,13 @@
+const modal_wrapper = document.querySelector(".modal__wrapper")
+
+const modal_call = document.querySelector(".modal__call")
+const modal_ok = document.querySelector(".modal__ok")
+const modal_buy = document.querySelector(".modal__buy")
+
+const call__btn = document.querySelectorAll(".call__btn")
+const ok__btn = document.querySelectorAll(".ok__btn")
+
+const cross = document.querySelectorAll(".close__btn")
 let newArrows = document.querySelectorAll(".newArrows button")
 let newDiv = document.querySelector(".box__main__new")
 
@@ -13,8 +23,6 @@ function mainNew(){
   
   newArrows.forEach(element => {
     element.addEventListener("click", function(e){
-      
-      console.log(element);
       
       if(element.className == "left"){
         count += step
@@ -54,7 +62,9 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
           </div>
           <div class="item_main">
             <div class="count">
-              
+              ${
+      
+      res[i]['countitemproduct_set'].map(element => `<div class="cnt">${element.value} ${element.unit}</div>`).join("")}
             </div>
           </div>
           <div class="item__footer">
@@ -65,15 +75,11 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
                 <img src="./img/Primary fill(2).svg" alt="">
               </button>
             </div>
-            <button class="big__btn"><p class="btn__text">Купить в 1 клик</p></button>
+            <button class="big__btn buy__btn"><p class="btn__text">Купить в 1 клик</p></button>
           </div>`
-    res[i]['countitemproduct_set'].forEach(element => {
-      elem.children[1].children[0].innerHTML = `${elem.children[1].children[0].innerHTML}<div class="cnt">${element.value} ${element.unit}</div>`
-      
-    });
+    
     for (let i = 0; i < elem.children[1].children[0].childElementCount; i++) {
       child = elem.children[1].children[0].children[i]
-      console.log(child);
       
 
       child.addEventListener("click", function(e){
@@ -89,8 +95,81 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
         }
       })
     }
-    
+    console.log(elem)
     newDiv.append(elem)
+    event_btn(elem.children[2].children[1])
   }
   mainNew()
 });
+
+function event_btn(item){
+    item.addEventListener("click", function(e){
+      const target = e.target
+      const item = target.closest(".item")
+
+      let obj = {}
+
+      obj["img"] = item.querySelector(".item__header img").src
+      obj["title"] = item.querySelector(".item__header .article__header").innerText
+      obj["price"] = item.querySelector(".item__footer div .text").innerText
+      obj["count"] = item.querySelector(".item_main .count").children
+      console.log(obj['count'])
+
+      document.body.style.overflow = "hidden"
+      modal_wrapper.style.display = "flex";
+      modal_buy.style.display = "flex";
+      modal_call.style.display = "none";
+      modal_ok.style.display = "none";  
+
+      modal_buy.querySelector(".buy__list img").src = obj['img']
+      modal_buy.querySelector(".buy__list div .text").innerText = obj['title']
+      modal_buy.querySelector(".buy__list .price p").innerText = obj['price']
+      modal_buy.querySelector(".buy__list .count").innerHTML = ""
+      for(let i = 0; i < obj['count'].length; i++){
+        modal_buy.querySelector(".buy__list .count").append(obj['count'][i].cloneNode(true))
+      }
+    })
+}
+
+function close_modal(){
+  document.body.style.overflow = "auto"
+  modal_wrapper.style.display = "none";
+  modal_buy.style.display = "none";
+  modal_call.style.display = "none";
+  modal_ok.style.display = "none";
+}
+
+function call_modal(){
+  document.body.style.overflow = "hidden"
+  modal_wrapper.style.display = "flex";
+  modal_buy.style.display = "none";
+  modal_call.style.display = "flex";
+  modal_ok.style.display = "none";
+}
+
+function ok_modal(){
+  document.body.style.overflow = "hidden"
+  modal_wrapper.style.display = "flex";
+  modal_buy.style.display = "none";
+  modal_ok.style.display = "flex";
+  modal_call.style.display = "none";
+}
+
+for(let i = 0; i < cross.length; i++){
+  cross[i].addEventListener("click", function(e){
+    close_modal()
+  })
+}
+
+for(let i = 0; i < call__btn.length; i++){
+  call__btn[i].addEventListener("click", function(e){
+    call_modal()
+  })
+}
+
+for(let i = 0; i < ok__btn.length; i++){
+  ok__btn[i].addEventListener("click", function(e){
+    ok_modal()
+  })
+}
+

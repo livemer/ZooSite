@@ -15,8 +15,6 @@ function main(){
   arrows.forEach(element => {
     element.addEventListener("click", function(e){
       
-      console.log(element);
-      
       if(element.className == "left"){
         count += step
       }
@@ -64,14 +62,13 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
                 <img src="./img/Primary fill(2).svg" alt="">
               </button>
             </div>
-            <button class="big__btn"><p class="btn__text">Купить в 1 клик</p></button>
+            <button class="big__btn buy__btn"><p class="btn__text">Купить в 1 клик</p></button>
           </div>`
     res[i]['countitemproduct_set'].forEach(element => {
       elem.children[1].children[0].innerHTML = `${elem.children[1].children[0].innerHTML}<div class="cnt">${element.value} ${element.unit}</div>`
     });
     for (let i = 0; i < elem.children[1].children[0].childElementCount; i++) {
       child = elem.children[1].children[0].children[i]
-      console.log(child);
       
 
       child.addEventListener("click", function(e){
@@ -87,6 +84,7 @@ fetch('https://oliver1ck.pythonanywhere.com/api/get_products_list/')
         }
       })
     }
+    event_btn(elem.children[2].children[1])
     mainDiv.append(elem)
   }
   main()

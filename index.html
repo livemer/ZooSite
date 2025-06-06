@@ -9,8 +9,8 @@
 </head>
 <body>
   <div class="modal__wrapper">
-    <form class="modal" style="display: none;">
-      <img class="cross" src="./img/Shape (1).svg" alt="">
+    <form class="modal modal__call">
+      <img class="cross close__btn" src="./img/Shape (1).svg" alt="">
       <p class="sale__title" style="text-align: center;">
         Перезвоним вам в течение 15 минут
       </p>
@@ -26,15 +26,15 @@
         </p>
         <input class="header__text gray__input" type="text" placeholder="+375 ___-__-__">
       </div>
-      <button class="about__btn" style="width: max-content;align-self: center;padding: 8px 16px 8px 16px">
+      <button class="about__btn ok__btn" style="width: max-content;align-self: center;padding: 8px 16px 8px 16px">
         <p class="text">Отправить</p>
       </button>
       <p class="small__text" style="text-align: center;">
         Нажимая на кнопку вы даёте согласие на обработку <a href="#">персональных данных</a>
       </p>
     </form>
-    <form class="modal" style="display: none;">
-      <img class="cross" src="./img/Shape (1).svg" alt="">
+    <form class="modal modal__ok">
+      <img class="cross close__btn" src="./img/Shape (1).svg" alt="">
       <img class="modal__img" src="./img/Shape (2).svg" alt="">
       <p class="sale__title" style="text-align: center;">
         Мы получили вашу заявку
@@ -42,12 +42,12 @@
       <p class="header__text">
         Ожидайте звонка в течение 15 минут
       </p>
-      <button class="about__btn" style="width: max-content;align-self: center;padding: 8px 16px 8px 16px">
+      <button class="about__btn close__btn" style="width: max-content;align-self: center;padding: 8px 16px 8px 16px">
         <p class="text">Понятно, жду</p>
       </button>
     </form>
-    <form class="modal" style="display: flex; padding: 24px">
-      <img class="cross" src="./img/Shape (1).svg" alt="">
+    <form class="modal modal__buy" style="padding: 24px">
+      <img class="cross close__btn" src="./img/Shape (1).svg" alt="">
       <p class="sale__title" style="text-align: center;">
         Оформление заказа в 1 клик
       </p>
@@ -56,9 +56,6 @@
         <div style="display: flex; flex-direction: column; gap:8px;">
           <p class="text">Консервы ROYAL CANIN STERILISED для взрослых кастрированных котов..</p>
           <div class="count">
-            <div class="cnt">0,2 кг</div>
-            <div class="cnt">0,4 кг</div>
-            <div class="cnt">0,8 кг</div>
           </div>
           <a href="#" class="link">Указать свой вес</a>
         </div>
@@ -95,7 +92,7 @@
         </p>
         <input class="header__text gray__input" type="text" placeholder="+375 ___-__-__">
       </div>
-      <button class="about__btn" style="width: max-content;align-self: center;padding: 8px 16px 8px 16px">
+      <button class="about__btn ok__btn" style="width: max-content;align-self: center;padding: 8px 16px 8px 16px">
         <p class="text">Оформить заказ</p>
       </button>
       <p class="small__text" style="text-align: center;">
@@ -130,7 +127,7 @@
               <a href="https://instagram.com"><img src="./img/instagram-2-1 1.svg" alt=""></a>
             </li>
             <li class="header-top__item">
-              <a href="#" class="link">Обратный звонок</a>
+              <a href="#" class="link call__btn">Обратный звонок</a>
             </li>
           </ul>
         </div>
@@ -574,7 +571,7 @@
                 <a href="https://instagram.com"><img src="./img/instagram-2-1 1.svg" alt=""></a>
               </li>
               <li class="header-top__item">
-                <a href="#" class="link">Обратный звонок</a>
+                <a href="#" class="link call__btn">Обратный звонок</a>
               </li>
             </div>
             <img src="./img/Line 5.png" alt="">
@@ -587,9 +584,10 @@
       </div>
     </footer>
   </div>
-  <script src="popular.js"></script>
-  <script src="new.js"></script>
-  <script src="brands.js"></script>
-  <script src="header.js"></script>
+  <script defer src="popular.js"></script>
+  <script defer src="new.js"></script>
+  <script defer src="brands.js"></script>
+  <script defer src="header.js"></script>
+  <script defer src="modal.js"></script>
 </body>
 </html>

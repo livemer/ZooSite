@@ -1,11 +1,11 @@
 .modal__wrapper{
+  display: none;
   background: rgba(0, 0, 0, 0.5);
   height: 100dvh;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
@@ -13,7 +13,7 @@
 }
 .modal{
   max-width: 512px;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 16px;
   padding: 24px 56px;
