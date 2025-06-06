@@ -14,10 +14,11 @@ header{
 }
 .header-top__item{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap:12px;
   white-space: nowrap;
+  flex-wrap: wrap;
   div{
     display: flex;
     justify-content: space-between;

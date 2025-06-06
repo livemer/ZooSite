@@ -224,10 +224,11 @@ header {
 
 .header-top__item {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 12px;
   white-space: nowrap;
+  flex-wrap: wrap;
   color: rgb(32, 34, 35);
 }
 .header-top__item div {
