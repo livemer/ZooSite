@@ -1139,12 +1139,19 @@ main {
 
 .location__wrapper {
   display: flex;
-  gap: 86px;
+  gap: 20px;
+  justify-content: space-between;
 }
 .location__wrapper ul {
+  max-width: 400px;
   display: flex;
   gap: 24px;
   flex-direction: column;
+}
+
+.loc__img {
+  height: 100%;
+  width: 100%;
 }
 
 .footer {
